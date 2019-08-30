@@ -1,3 +1,7 @@
-READ 3000 ... okay
-READ 4001 ... okay
-READ 20000 ... okay
+READ 3fff ... okay
+READ 4000 ... okay
+READ 1bad0 ... okay
+READ 1eba5 ... okay
+READ 22abc ... okay
+READ 80000 ... page fault
+READ 84000 ... page fault
