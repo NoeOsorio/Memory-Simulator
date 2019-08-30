@@ -1,0 +1,25 @@
+// Enter READ/WRITE commands into this file
+// READ <OPTIONAL number type: bin/hex/oct> <virtual memory address or random>
+// WRITE <OPTIONAL number type: bin/hex/oct> <virtual memory address or random>
+READ hex 2FFB
+READ hex 5B56
+READ hex 9ABD
+READ hex EFA5
+READ hex 12001
+READ hex 1500C
+READ hex 1BAD6
+READ hex 1EBA8
+READ hex 22ABD
+READ hex 25FFC
+
+
+WRITE hex 2FFA
+WRITE hex 5B55
+WRITE hex 9ABB
+WRITE hex EFA0
+WRITE hex 12004
+WRITE hex 15000
+WRITE hex 1BAD0
+WRITE hex 1EBA5
+WRITE hex 22ABC
+WRITE hex 25FFA
