@@ -226,7 +226,7 @@ public class Kernel extends Thread {
             ///
 
             try {
-              System.out.println("Block: " + block);
+              // System.out.println("Block: " + block);
               String pageSplit = st.nextToken();
               // System.out.println(("Next word 1: " + pageSplit));
               String[] newMemRange = pageSplit.split("-");
@@ -236,7 +236,7 @@ public class Kernel extends Thread {
               // System.out.println("Second " + newMemRange[1]);
               instructVector.addElement(new Instruction(command, addr, pageLow, pageHigh));
             } catch (Exception e) {
-              System.err.println(e);
+              System.err.println("Error leyendo " + e);
               instructVector.addElement(new Instruction(command, addr));
             }
 
