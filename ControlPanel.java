@@ -85,7 +85,6 @@ public class ControlPanel extends Frame
   Label lastTouchTimeValueLabel = new Label("0" , Label.LEFT) ;
   Label lowValueLabel = new Label("0" , Label.LEFT) ;
   Label highValueLabel = new Label("0" , Label.LEFT) ;
-  Label segmentosValueLabel = new Label("0" , Label.LEFT) ;
   Label l0 = new Label(null, Label.CENTER);
   Label l1 = new Label(null, Label.CENTER);
   Label l2 = new Label(null, Label.CENTER);
@@ -550,9 +549,6 @@ public class ControlPanel extends Frame
     highValueLabel.reshape( 395,225+25,230,15 );
     add( highValueLabel );
 
-    segmentosValueLabel.reshape( 395,240+25,230,15 );
-    add( segmentosValueLabel );
-
     Label virtualOneLabel = new Label( "virtual" , Label.CENTER) ;
     virtualOneLabel.reshape(0,15+25,70,15); 
     add(virtualOneLabel);
@@ -620,11 +616,6 @@ public class ControlPanel extends Frame
     Label highLabel = new Label("high: " , Label.LEFT) ;
     highLabel.reshape(285,225+25,110,15);
     add(highLabel);
-
-    Label segmentosLabel = new Label("segmentos: " , Label.LEFT) ;
-    segmentosLabel.reshape(285,240+25,110,15);
-    add(segmentosLabel);
-
 
     l0.reshape( 70, (2)*15+25, 60, 15 );
     l0.setForeground( Color.red );
@@ -962,13 +953,6 @@ public class ControlPanel extends Frame
     lastTouchTimeValueLabel.setText( Integer.toString( page.lastTouchTime ) );
     lowValueLabel.setText(Long.toString( page.low , Kernel.addressradix ) );
     highValueLabel.setText(Long.toString( page.high , Kernel.addressradix ) );
-    try {
-      segmentosValueLabel.setText( page.segmentos != null ? page.segmentos.toString() : "[]");
-      
-    } catch (Exception e) {
-      //TODO: handle exception
-      System.err.println("Error en segmentos: " + e);
-    }
   }
 
   public void setStatus(String status) {
